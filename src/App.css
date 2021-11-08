@@ -1,38 +1,693 @@
-.App {
+@font-face {
+  font-family: "graphik-medium";
+  src: url(./assets/fonts/Graphik-Medium.ttf);
+}
+
+@font-face {
+  font-family: "graphik-regular";
+  src: url(./assets/fonts/Graphik-Regular.ttf);
+}
+
+@font-face {
+  font-family: "graphik-semibold";
+  src: url(./assets/fonts/Graphik-Semibold.ttf);
+}
+
+@font-face {
+  font-family: "graphik-bold";
+  src: url(./assets/fonts/Graphik-Bold.ttf);
+}
+
+@font-face {
+  font-family: "graphik-black";
+  src: url(./assets/fonts/Graphik-Black.ttf);
+}
+
+@font-face {
+  font-family: "graphik-light";
+  src: url(./assets/fonts/Graphik-Light.ttf);
+}
+
+@font-face {
+  font-family: "graphik-thin";
+  src: url(./assets/fonts/Graphik-Thin.ttf);
+}
+
+@font-face {
+  font-family: "graphik-extralight";
+  src: url(./assets/fonts/Graphik-Extralight.ttf);
+}
+
+* {
+  background-color: #181818;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #181818;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.center {
+  text-decoration: none;
+  margin-left: 165px;
+  margin-right: 165px;
+}
+
+.center ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.center li {
+  margin-right: 40px;
+  color: white;
+  font-family: "graphik-medium";
+  padding: 5px 10px 8px 10px;
+  border-radius: 10px;
+}
+
+.loginNav button {
+  color: white;
+  font-family: "graphik-medium";
+  padding: 10px 40px 10px 40px;
+  float: left;
+  border-color: white;
+  border-width: 1px;
+  font-size: 16px;
+}
+
+.textSologan {
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.textHeader {
+  color: white;
+  font-size: 40px;
+  font-family: "graphik-semibold";
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.textSup {
+  color: white;
+  font-size: 22px;
+  font-family: "graphik-regular";
+  text-align: center;
+  line-height: 25px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonMenu {
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonTry {
+  padding: 15px 30px 15px 30px;
+  color: white;
+  background-color: #4452fe;
+  font-family: "graphik-regular";
+  font-size: 15px;
+  border-width: 0px;
+  margin-right: 25px;
+}
+
+.buttonLearn {
+  padding: 15px 30px 15px 30px;
+  color: white;
+  font-family: "graphik-regular";
+  font-size: 15px;
+  border-width: 1px;
+  border-color: white;
+}
+
+.screensExample {
+  margin-top: 160px;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 270px;
+}
+
+.textFeature {
+  text-align: center;
+}
+
+.textFeature h3 {
+  font-family: "graphik-extralight";
+  font-size: 42px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.textFeature p {
+  font-family: "graphik-light";
+  color: white;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  flex-direction: row;
+}
+
+.textSubChatbot {
+  margin-left: 30px;
+}
+
+.restaurant {
+  color: white;
+  margin-bottom: 60px;
+}
+
+.restaurantTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "graphik-regular";
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.restaurant h3 {
+  margin-left: 10px;
+  width: 120px;
+}
+
+.restaurant p {
+  font-family: "graphik-regular";
+  font-size: 12px;
+  width: 190px;
+  margin-top: 10px;
+  line-height: 19px;
+}
+
+.contents {
+  margin-top: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.textContents {
+  color: white;
+  text-align: center;
+}
+
+.textContents h3 {
+  font-family: "graphik-extralight";
+  font-size: 42px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.textContents p {
+  font-family: "graphik-light";
+  color: white;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.contentsExample {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 45px;
+  font-family: "graphik-regular";
+}
+
+.workContent {
+  border-radius: 10px;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 45px 25px 35px 25px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.workContent h4 {
+  background-color: white;
+  font-size: 20px;
+}
+
+.workContent p {
+  margin-top: 25px;
+  color: #5c5c5c;
+  width: 270px;
+  background-color: white;
+  text-align: center;
+}
+
+.workContent button {
+  padding: 12px 40px 15px 40px;
+  margin-top: 65px;
+  background-color: #4452fe;
+  border: none;
+  color: white;
+  font-family: "graphik-medium";
+  font-size: 15px;
+}
+
+.workContent img {
+  background-color: white;
+  width: 405px;
+  height: 222px;
+  margin-top: 50px;
+}
+
+.designContent {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding: 45px 25px 35px 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.designContent h4 {
+  background-color: white;
+  font-size: 20px;
+  margin-top: 28px;
+}
+
+.designContent p {
+  margin-top: 25px;
+  color: #5c5c5c;
+  width: 270px;
+  background-color: white;
+  text-align: center;
+}
+
+.designContent button {
+  padding: 12px 40px 15px 40px;
+  margin-top: 35px;
+  background-color: #4452fe;
+  border: none;
+  color: white;
+  font-family: "graphik-medium";
+  font-size: 15px;
+}
+
+.designContent img {
+  background-color: white;
+  width: 379px;
+  height: 304px;
+  margin-top: 25px;
+}
+
+.gallery {
+  margin-top: 320px;
+  margin-bottom: 30px;
+}
+
+.textGallery {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.textGallery h3 {
+  font-family: "graphik-extralight";
+  font-size: 42px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.textGallery p {
+  font-family: "graphik-light";
+  color: white;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.listImage1 {
+  display: flex;
+  justify-content: center;
+}
+
+.listImage2 {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonMore {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.buttonMore button {
+  padding: 15px 45px 17px 45px;
+  color: white;
+  font-family: "graphik-medium";
+  font-size: 17px;
+  border-width: 1;
+  border-color: white;
+}
+
+.partners {
+  margin-top: 320px;
+  margin-bottom: 30px;
+}
+
+.textPartners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.textPartners h3 {
+  font-family: "graphik-extralight";
+  font-size: 42px;
+  color: white;
+  letter-spacing: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textPartners p {
+  font-family: "graphik-light";
+  color: white;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.logoPartners {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  padding-left: 100px;
+}
+
+.logoPartners div {
+  margin-right: 70px;
+}
+
+.buttonPartners {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.buttonPartners button {
+  padding: 15px 45px 17px 45px;
+  color: white;
+  font-family: "graphik-medium";
+  font-size: 17px;
+  border-width: 1;
+  border-color: white;
+}
+
+.testimonials {
+  margin-top: 320px;
+  margin-bottom: 30px;
+}
+
+.textTestimonials {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.textTestimonials h3 {
+  font-family: "graphik-extralight";
+  font-size: 42px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.commentsTestimonials {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.commentsHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+
+.commentsItem {
+  padding: 35px 40px 35px 40px;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.commentsHeader h4 {
+  font-family: "graphik-light";
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-left: 20px;
+  width: 150px;
+}
+
+.commentsSub {
+  color: white;
+  font-family: "graphik-light";
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 25px;
+  width: 300px;
+  line-height: 22px;
+}
+
+.commentsList2 {
+  margin-left: 20px;
+}
+
+.banners {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+.bannersItem {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px 0px 45px;
+  background-color: #343434;
+  border-radius: 20px;
+}
+
+.bannersDes {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #343434;
+  margin-right: 45px;
+}
+
+.bannersDes h2 {
+  font-family: "graphik-light";
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #343434;
+}
+
+.bannersDes button {
+  margin-top: 20px;
+  width: 180px;
+  color: white;
+  font-family: "graphik-light";
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: #4452fe;
+  border: none;
+  padding: 10px 40px 10px 40px;
+}
+
+.bannersImage {
+  background-color: #343434;
+  border-bottom-right-radius: 20px;
+}
+
+.bannersImage img {
+  background-color: #343434;
+  border-bottom-right-radius: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.footerItem {
+  margin-right: 160px;
+}
+
+.footerItem p {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "graphik-extralight";
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.titleItem {
+  font-size: 17px;
+  color: white;
+  font-family: "graphik-extralight";
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.footerContact {
+  margin-left: 190px;
+}
+
+.footerContact p {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "graphik-extralight";
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.map {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.map p {
+  margin-top: 10px;
+  margin-left: 7px;
+  font-family: "graphik-medium";
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 14px;
+  margin-left: 5px;
+}
+
+.phone p {
+  margin-top: 10px;
+  font-family: "graphik-medium";
+  font-weight: 200;
+  font-size: 13px;
+  margin-left: 11px;
+}
+
+.social {
+  margin-top: 23px;
+  display: flex;
+}
+
+.social div {
+  margin-right: 25px;
+}
+
+.lineFooter {
+  background-color: white;
+}
+
+.loginNav button:hover {
+  cursor: pointer;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.center li:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+.buttonTry:hover {
+  cursor: pointer;
+}
+
+.buttonLearn:hover {
+  cursor: pointer;
+}
+
+.workContent button:hover {
+  cursor: pointer;
+}
+
+.designContent button:hover {
+  cursor: pointer;
+}
+
+.gallery button:hover {
+  cursor: pointer;
+}
+
+.buttonPartners button:hover {
+  cursor: pointer;
+}
+
+.social div:hover {
+  cursor: pointer;
 }
